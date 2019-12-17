@@ -26,9 +26,17 @@ def remove_quotes(question, answer):
     return question, answer
 
 
+def remove_edit(question, answer):
+    if "edit:" in answer.lower():
+        to = answer.lower().index("edit:")
+        answer = answer[:to]
+    return question, answer
+
+
 steps = [
     split_newline,
-    remove_quotes
+    remove_quotes,
+    remove_edit
 ]
 
 for comment in comments:
