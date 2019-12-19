@@ -59,8 +59,9 @@
         <div class="d-lg-none" style="padding: 20px;"></div>
         <div class="col-lg align-self-center justify-content-center">
             {% if comment %}
-            <h2><a href="https://reddit.com{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
+            <h4><i class="fas fa-bomb"></i><a href="https://reddit.com{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h4>
             by <a href="https://reddit.com/u/{{comment.author}}" target="_blank">{{comment.author}}</a>,
+
             <i class="fas fa-arrow-alt-circle-up"></i> {{comment.score}} boomed
             <br>
             <br>
