@@ -60,16 +60,19 @@
         <div class="col-lg align-self-center justify-content-center">
             {% if comment %}
             <h2><a href="https://reddit.com{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
-            by /u/{{comment.author}},
-            {{comment.score}} boomed
+            by <a href="https://reddit.com/u/{{comment.author}}" target="_blank">{{comment.author}}</a>,
+            <i class="fas fa-arrow-alt-circle-up"></i> {{comment.score}} boomed
             <br>
-            ❤️ made for lulz. love your boomer
             <br>
-            😉 inspired by <a
+            <i class="fas fa-heart" style="color: red"></i>️ made for lulz. love your boomer
+            <br>
+            <i class="fas fa-smile" style="color: orange"></i> inspired by <a
                 href="https://www.reddit.com/r/AskReddit/comments/e18g6m/if_ok_boomer_was_a_digital_assistant_like_ok/">this
             reddit post</a>
             <br>
-            😃 <a href="https://cheparev.com">about me</a>
+            <i class="fas fa-smile-beam" style="color: green"></i> <a href="https://cheparev.com">about me</a>
+            <br>
+            <i class="fas fa-code-branch"></i> <a href="https://github.com/eviltnan/okboomer">github</a>
             {% endif %}
         </div>
     </div>
