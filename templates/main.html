@@ -12,7 +12,10 @@
           top: 50%;
           transform: translate(-50%, -50%);
         }
-
+        .input {
+            outline: none !important;
+            border:1px solid;
+        }
     </style>
 </head>
 
@@ -22,16 +25,23 @@
         <div class="col align-self-center justify-content-center">
             <form method="post">
                 <h3>Ok Boomer, <input type="text" name="question" value="{{question}}"
-                                      style="border: none; width: 100%"></h3>
+                                      style="border: none; width: 100%"
+                                      {%if not comment %}autofocus{%endif%}></h3>
 
                 <br>
-                <input type="submit" class="btn btn-dark" value="boom">
+
+                {% if comment %}
+                    <a role="button" href="/" class="btn btn-dark">more boomers</a>
+                {% else %}
+                    <input type="submit" class="btn btn-dark" value="boom">
+                {% endif %}
             </form>
         </div>
-        <div class="col align-self-end">
+        <div class="col align-self-center  justify-content-center">
             {% if comment %}
-            {{comment.score}}
-            <a href="https://reddit.com/{{comment.permalink}}">{{comment.answer}}</a>
+            <h2><a href="https://reddit.com/{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
+            by /u/{{comment.author}},
+            {{comment.score}} boomed
             {% endif %}
         </div>
     </div>
