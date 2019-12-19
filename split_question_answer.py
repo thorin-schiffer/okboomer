@@ -69,5 +69,6 @@ for comment in comments:
     comment['answer'] = answer
     parsed_comments.append(comment)
 
+parsed_comments = sorted(parsed_comments, key=lambda x: -x['score'])
 with open("qa.json", "w") as f:
     json.dump(parsed_comments, f)
