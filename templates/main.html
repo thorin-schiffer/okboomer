@@ -45,7 +45,7 @@
         </div>
         <div class="col align-self-center  justify-content-center">
             {% if comment %}
-            <h2><a href="https://reddit.com/{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
+            <h2><a href="https://reddit.com{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
             by /u/{{comment.author}},
             {{comment.score}} boomed
             {% endif %}
