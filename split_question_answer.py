@@ -62,6 +62,9 @@ for comment in comments:
     for step in steps:
         question, answer = step(question, answer)
 
+    if not question or not answer:
+        continue
+
     comment['question'] = question
     comment['answer'] = answer
     parsed_comments.append(comment)
