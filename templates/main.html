@@ -44,13 +44,14 @@
                 <div class="input-group">
                     <input type="text" class="form-control" name="question" value="{{question}}" style="width: 100%">
 
-                    {% if comment %}
-                    <a role="button" href="/" class="btn btn-dark">more boomers</a>
-                    {% else %}
                     <div class="input-group-append">
-                        <button type="submit" class="btn btn-dark" value="boom"><i class="fas fa-bomb"></i> boom</button>
+                        {% if comment %}
+                        <a role="button" href="/" class="btn btn-dark">more <i class="fas fa-bomb"></i> boomers</a>
+                        {% else %}
+                        <button type="submit" class="btn btn-dark" value="boom"><i class="fas fa-bomb"></i> boom
+                        </button>
+                        {% endif %}
                     </div>
-                    {% endif %}
                 </div>
             </form>
 
