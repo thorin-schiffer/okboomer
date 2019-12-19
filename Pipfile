@@ -9,6 +9,7 @@ verify_ssl = true
 praw = "*"
 fuzzywuzzy = {extras = ["speedup"],version = "*"}
 flask = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
