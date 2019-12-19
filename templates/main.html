@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Ok, Boomer</title>
+    <title>Ok, Boomer - your not digital assistant</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .center {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+    </style>
 </head>
-<body>
-Ok, Boomer
-<form method="post">
-    <input type="text" name="question" value="{{question}}">
-    <input type="submit">
-    {% if comment %}
-    {{comment.score}}
-    <a href="https://reddit.com/{{comment.permalink}}">{{comment.answer}}</a>
-    {% endif %}
-</form>
+
+<body style="height: 100%; width: 100%;">
+<div class="container center">
+    <div class="row">
+        <div class="col align-self-center justify-content-center">
+            <form method="post">
+                <h3>Ok Boomer, <input type="text" name="question" value="{{question}}"
+                                      style="border: none; width: 100%"></h3>
+
+                <br>
+                <input type="submit" class="btn btn-dark" value="boom">
+            </form>
+        </div>
+        <div class="col align-self-end">
+            {% if comment %}
+            {{comment.score}}
+            <a href="https://reddit.com/{{comment.permalink}}">{{comment.answer}}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
