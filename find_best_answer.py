@@ -6,6 +6,7 @@ from fuzzywuzzy.fuzz import token_sort_ratio
 TEXT_MATCH_RESULTS = 10
 with open("qa.json", "r") as f:
     comments = json.load(f)
+questions = [comment['question'] for comment in comments]
 
 qa = {
     comment['question']: comment for comment in comments

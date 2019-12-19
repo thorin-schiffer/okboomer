@@ -9,9 +9,10 @@ Ok, Boomer
 <form method="post">
     <input type="text" name="question" value="{{question}}">
     <input type="submit">
-
+    {% if comment %}
     {{comment.score}}
     <a href="https://reddit.com/{{comment.permalink}}">{{comment.answer}}</a>
+    {% endif %}
 </form>
 </body>
 </html>
