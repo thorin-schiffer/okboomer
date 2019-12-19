@@ -16,24 +16,30 @@
             outline: none !important;
             border:1px solid;
         }
+
     </style>
 </head>
 
 <body style="height: 100%; width: 100%;">
 <div class="container center">
     <div class="row">
-        <div class="col align-self-center justify-content-center">
+        <div class="col-6 align-self-center justify-content-center">
             <form method="post">
-                <h3>Ok Boomer, <input type="text" name="question" value="{{question}}"
-                                      style="border: none; width: 100%"
-                                      {%if not comment %}autofocus{%endif%}></h3>
+                <h3>Ok
+                    <span style="color:#4285F4">B</span><span style="color:#DB4437">o</span><span style="color:#F4B400">o</span><span style="color:#4285F4">m</span><span style="color:#0F9D58">e</span><span style="color:#DB4437">r</span>
+                    ,
+
+
+                    <input type="text" name="question" value="{{question}}"
+                           style="border: none; width: 100%"
+                           {%if not comment %}autofocus{%endif%}></h3>
 
                 <br>
 
                 {% if comment %}
-                    <a role="button" href="/" class="btn btn-dark">more boomers</a>
+                <a role="button" href="/" class="btn btn-dark">more boomers</a>
                 {% else %}
-                    <input type="submit" class="btn btn-dark" value="boom">
+                <input type="submit" class="btn btn-dark" value="boom">
                 {% endif %}
             </form>
         </div>
