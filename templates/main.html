@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ok, Boomer - your not digital assistant</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -20,10 +22,10 @@
     </style>
 </head>
 
-<body style="height: 100%; width: 100%;">
+<body style="font-size:14px">
 <div class="container center">
     <div class="row">
-        <div class="col-6 align-self-center justify-content-center">
+        <div class="col-lg align-self-center justify-content-center">
             <form method="post">
                 <h3>Ok
                     <span style="color:#4285F4">B</span><span style="color:#DB4437">o</span><span style="color:#F4B400">o</span><span style="color:#4285F4">m</span><span style="color:#0F9D58">e</span><span style="color:#DB4437">r</span>
@@ -43,13 +45,18 @@
                 {% endif %}
             </form>
         </div>
-        <div class="col align-self-center  justify-content-center">
+        <div class="d-lg-none" style="padding: 20px;"></div>
+        <div class="col-lg align-self-center justify-content-center">
             {% if comment %}
             <h2><a href="https://reddit.com{{comment.permalink}}" target="_blank">{{comment.answer}}</a></h2>
             by /u/{{comment.author}},
             {{comment.score}} boomed
             <br>
-            <i>made for lulz. love your boomer ❤️</i>
+            ❤️ made for lulz. love your boomer
+            <br>
+            😉 inspired by <a href="https://www.reddit.com/r/AskReddit/comments/e18g6m/if_ok_boomer_was_a_digital_assistant_like_ok/">this reddit post</a>
+            <br>
+            😃 <a href="https://cheparev.com">about me</a>
             {% endif %}
         </div>
     </div>
