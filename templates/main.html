@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <title>Ok, Boomer - your not digital assistant</title>
     <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     {% if comment %}
-    <script type='text/javascript' src='http://platform-api.sharethis.com/js/sharethis.js#property=5dfb864ecb0a4e001263542a&product=sticky-share-buttons&cms=sop' async='async'></script>
+    <script type='text/javascript'
+            src='http://platform-api.sharethis.com/js/sharethis.js#property=5dfb864ecb0a4e001263542a&product=sticky-share-buttons&cms=sop'
+            async='async'></script>
     {% endif %}
     <style>
         .center {
@@ -21,32 +25,35 @@
             outline: none !important;
             border:1px solid;
         }
-
     </style>
 </head>
 
 <body style="font-size:14px">
 <div class="container center">
     <div class="row">
+
         <div class="col-lg align-self-center justify-content-center">
-            <form method="post">
-                <h3>Ok
-                    <span style="color:#4285F4">B</span><span style="color:#DB4437">o</span><span style="color:#F4B400">o</span><span style="color:#4285F4">m</span><span style="color:#0F9D58">e</span><span style="color:#DB4437">r</span>
-                    ,
+            <h1>Ok
+                <span style="color:#4285F4">B</span><span style="color:#DB4437">o</span><span
+                        style="color:#F4B400">o</span><span
+                        style="color:#4285F4">m</span><span style="color:#0F9D58">e</span><span
+                        style="color:#DB4437">r</span>
+                ,
+            </h1>
+            <form method="post" style="width: 100%">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="question" value="{{question}}" style="width: 100%">
 
-
-                    <input type="text" name="question" value="{{question}}"
-                           style="border: none; width: 100%"
-                           {%if not comment %}autofocus{%endif%}></h3>
-
-                <br>
-
-                {% if comment %}
-                <a role="button" href="/" class="btn btn-dark">more boomers</a>
-                {% else %}
-                <input type="submit" class="btn btn-dark" value="boom">
-                {% endif %}
+                    {% if comment %}
+                    <a role="button" href="/" class="btn btn-dark">more boomers</a>
+                    {% else %}
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-dark" value="boom"><i class="fas fa-bomb"></i> boom</button>
+                    </div>
+                    {% endif %}
+                </div>
             </form>
+
         </div>
         <div class="d-lg-none" style="padding: 20px;"></div>
         <div class="col-lg align-self-center justify-content-center">
@@ -57,7 +64,9 @@
             <br>
             ❤️ made for lulz. love your boomer
             <br>
-            😉 inspired by <a href="https://www.reddit.com/r/AskReddit/comments/e18g6m/if_ok_boomer_was_a_digital_assistant_like_ok/">this reddit post</a>
+            😉 inspired by <a
+                href="https://www.reddit.com/r/AskReddit/comments/e18g6m/if_ok_boomer_was_a_digital_assistant_like_ok/">this
+            reddit post</a>
             <br>
             😃 <a href="https://cheparev.com">about me</a>
             {% endif %}
